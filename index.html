@@ -36,7 +36,7 @@
     // Funktion, um den Serverstatus zu laden
     async function loadServerStatus() {
         try {
-            const host = 'hypixel.net'; // Minecraft-Server, den du überwachen möchtest
+            const host = 'mc.mineplay.link'; // Minecraft-Server, den du überwachen möchtest
             const response = await fetch(`https://api.mcsrvstat.us/2/${host}`);
             const data = await response.json();
 
@@ -51,7 +51,7 @@
                 statusDiv.innerHTML = `
                     <h2>Server Status</h2>
                     ${statusPoint.outerHTML}
-                    <span class="online">Online</span>
+                    <span>Online</span>
                     <p>Spieler online: ${data.players.online}/${data.players.max}</p>
                     <p>Version: ${data.version.name}</p>
                     <p>Ping: ${data.ping} ms</p> <!-- Ping anzeigen -->
@@ -61,7 +61,7 @@
                 statusDiv.innerHTML = `
                     <h2>Server Status</h2>
                     ${statusPoint.outerHTML}
-                    <span class="offline">Offline</span>
+                    <span>Offline</span>
                 `;
             }
         } catch (error) {
@@ -72,8 +72,6 @@
     // Lade den Status, wenn die Seite geladen wird
     window.onload = loadServerStatus;
 </script>
-
-
 
 </body>
 </html>
