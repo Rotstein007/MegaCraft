@@ -2,6 +2,20 @@
     user-select: none;
 }
 
+.status-point {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.online {
+    background-color: green;
+}
+.offline {
+    background-color: gray;
+}
+
 #myVideo {
     position: fixed;
     right: 0;
@@ -21,16 +35,16 @@ a {
 }
 
 .content {
-    color: #fff;
+    color: rgba(216, 216, 216, 0.93);
     text-shadow:
-            0 0 7px #fff,
-            0 0 10px #fff,
-            0 0 21px #fff,
-            0 0 42px #00fff7,
-            0 0 82px #00fff7,
-            0 0 92px #00fff7,
-            0 0 102px #00eaff,
-            0 0 151px #00eaff;
+            0 0 7px rgba(255, 255, 255, 0.55),
+            0 0 10px rgba(255, 255, 255, 0.62),
+            0 0 21px rgba(255, 255, 255, 0.71),
+            0 0 42px rgba(0, 255, 247, 0.73),
+            0 0 82px rgba(0, 255, 247, 0.78),
+            0 0 92px rgba(0, 255, 247, 0.76),
+            0 0 102px rgba(0, 234, 255, 0.76),
+            0 0 151px rgba(0, 234, 255, 0.76);
     background-color: rgba(84, 84, 84, 0.2);
     backdrop-filter: blur(10px);
     border-radius: 2em;
