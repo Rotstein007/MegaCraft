@@ -54,6 +54,7 @@
                     <p>Spieler online: ${data.players.online}/${data.players.max}</p>
                     <p>Version: ${data.version}</p>
                     <p>Motd: ${data.motd.html[0]}</p>
+                    <p><pre>           ${data.motd.html[1]}</pre></p>
                 `;
             } else {
                 statusPoint.classList.add('offline'); // Grauer Punkt
