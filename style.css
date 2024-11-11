@@ -115,3 +115,13 @@ a {
     font-weight: bold;
     text-decoration: none; /* Link ohne Unterstreichung */
 }
+
+#megacraft-logo {
+    width: 500px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -3em;
+    margin-top: -3em; /* Negativer Wert zum Hochschieben */
+}
