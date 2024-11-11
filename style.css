@@ -25,6 +25,16 @@
     z-index: -1;
 }
 
+.darker {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
 a {
     color: #ffffff;
     text-decoration: none;
@@ -35,29 +45,73 @@ a {
 }
 
 .content {
+    animation: zoomIn 1.5s ease; /* Animation hinzugefügt */
     color: rgba(216, 216, 216, 0.93);
     text-shadow:
-            0 0 7px rgba(255, 255, 255, 0.55),
-            0 0 10px rgba(255, 255, 255, 0.62),
-            0 0 21px rgba(255, 255, 255, 0.71),
-            0 0 42px rgba(0, 255, 247, 0.73),
-            0 0 82px rgba(0, 255, 247, 0.78),
-            0 0 92px rgba(0, 255, 247, 0.76),
-            0 0 102px rgba(0, 234, 255, 0.76),
-            0 0 151px rgba(0, 234, 255, 0.76);
+            0 0 5px rgba(255, 255, 255, 0.29),
+            0 0 8px rgba(255, 255, 255, 0.45),
+            0 0 15px rgba(255, 255, 255, 0.65),
+            0 0 30px rgba(0, 255, 247, 0.63),
+            0 0 50px rgba(0, 255, 247, 0.67),
+            0 0 60px rgba(0, 255, 247, 0.69);
     background-color: rgba(84, 84, 84, 0.2);
     backdrop-filter: blur(10px);
+    border: 3px solid rgba(255, 255, 255, 0.5);
     border-radius: 2em;
     width: 19em;
     height: 24em;
     font-size: 25px;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* Zentrieren */
     padding: 2em;
+}
+
+@keyframes zoomIn { /* Keyframes für die Animation */
+    from {
+        transform: translate(-50%, -50%) scale(0.8); /* Start: verkleinert */
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1); /* Ende: Originalgröße */
+        opacity: 1;
+    }
 }
 
 .icon {
     height: 1em;
+}
+
+.icon {
+    height: 1em;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2em;
+    opacity: 0.7;
+    position: fixed;
+    bottom: 1em;
+    width: 100%;
+    color: white; /* Textfarbe weiß */
+}
+
+.footer img {
+    width: 2.5em;
+    height: auto;
+    filter: invert(1); /* Bildfarbe weiß */
+}
+
+.footer p {
+    font-size: 0.9em;
+    margin-top: 0.5em;
+}
+
+.footer a {
+    color: white; /* Linkfarbe weiß */
+    font-weight: bold;
+    text-decoration: none; /* Link ohne Unterstreichung */
 }
